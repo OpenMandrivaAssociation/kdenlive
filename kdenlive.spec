@@ -1,4 +1,3 @@
-
 Name: 		kdenlive
 Version: 	0.4
 Release: 	%mkrel 2
@@ -13,7 +12,6 @@ BuildRequires:	mlt++-devel
 BuildRequires:	libavc-devel
 BuildRequires:	libiec61883-devel
 Requires:	mlt >= 0.2.2
-Requires: 	piave >= 0.2.2
 Requires:	kdebase-progs >= 3.0.0
 URL:		http://kdenlive.sourceforge.net/
 
@@ -47,9 +45,6 @@ export CXXFLAGS="%optflags -fno-omit-frame-pointer"
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
-install -d %buildroot/%_menudir/
-kdedesktop2mdkmenu.pl kdenlive Multimedia/Video %buildroot/%_datadir/applications/kde/%{name}.desktop %buildroot/%_menudir/%{name}
-
 perl -pi -e 's|^Icon=.*|Icon=%{name}|' %buildroot/%_datadir/applications/kde/kdenlive.desktop
 
 %find_lang %name
@@ -60,18 +55,14 @@ rm -rf %{buildroot}
 %post
 /sbin/ldconfig
 %update_menus
-%if %mdkversion > 200600
 %{update_desktop_database}
 %update_icon_cache hicolor
-%endif
 
 %postun
 /sbin/ldconfig
 %clean_menus
-%if %mdkversion > 200600
 %{clean_desktop_database}
 %clean_icon_cache hicolor
-%endif
 
 %files -f %name.lang
 %defattr(-, root, root)
@@ -90,5 +81,3 @@ rm -rf %{buildroot}
 %{_datadir}/icons/hicolor/48x48/apps/piave.png
 %_datadir/mimelnk/application/vnd.kde.kdenlive.desktop
 %_datadir/mimelnk/application/vnd.kde.kdenlive.scenelist.desktop
-
-
