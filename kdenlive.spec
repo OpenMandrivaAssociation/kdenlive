@@ -1,6 +1,6 @@
 Name: 		kdenlive
 Version: 	0.4
-Release: 	%mkrel 2
+Release: 	%mkrel 3
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
