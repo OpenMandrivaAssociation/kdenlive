@@ -72,7 +72,6 @@ rm -rf %{buildroot}
 %_datadir/apps/%{name}
 %_datadir/config.kcfg
 %_datadir/applications/kde/%{name}.desktop
-%_menudir/%{name}
 %{_datadir}/icons/hicolor/16x16/apps/%{name}.png
 %{_datadir}/icons/hicolor/16x16/actions/%{name}_*
 %{_datadir}/icons/hicolor/32x32/apps/%{name}.png
