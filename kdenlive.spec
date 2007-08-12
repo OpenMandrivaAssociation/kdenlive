@@ -72,16 +72,11 @@ rm -rf %{buildroot}
 %files -f %name.lang
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog README TODO
-%doc %{_docdir}/HTML
+#doc %{_docdir}/HTML
 %_bindir/*
 %_datadir/apps/%{name}
 %_datadir/config.kcfg
 %_datadir/applications/kde/%{name}.desktop
-%{_datadir}/icons/hicolor/16x16/apps/%{name}.png
-%{_datadir}/icons/hicolor/16x16/actions/%{name}_*
-%{_datadir}/icons/hicolor/32x32/apps/%{name}.png
-%{_datadir}/icons/hicolor/48x48/apps/%{name}.png
-%{_datadir}/icons/hicolor/64x64/apps/%{name}.png
-%{_datadir}/icons/hicolor/48x48/apps/piave.png
+#%{_datadir}/icons/hicolor/*/apps/*
 %_datadir/mimelnk/application/vnd.kde.kdenlive.desktop
 %_datadir/mimelnk/application/vnd.kde.kdenlive.scenelist.desktop
