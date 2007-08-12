@@ -1,18 +1,18 @@
 Name: 		kdenlive
-Version: 	0.4
-Release: 	%mkrel 4
+Version: 	0.5
+Release: 	%mkrel 1
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	%name-%version.tar.bz2
 BuildRequires:	kdelibs-devel
-BuildRequires:	mlt-devel
+BuildRequires:	mlt-devel >= 0.2.4
 BuildRequires:	mlt++-devel
 BuildRequires:	libavc-devel
 BuildRequires:	libiec61883-devel
 BuildRequires:	desktop-file-utils
-Requires:	mlt >= 0.2.2
+Requires:	mlt >= 0.2.4
 Requires:	kdebase-progs >= 3.0.0
 URL:		http://kdenlive.sourceforge.net/
 
