@@ -11,6 +11,7 @@ BuildRequires:	mlt-devel >= 0.2.4
 BuildRequires:	mlt++-devel
 BuildRequires:	libavc-devel
 BuildRequires:	libiec61883-devel
+BuildRequires:	ffmpeg-devel
 BuildRequires:	desktop-file-utils
 Requires:	mlt >= 0.2.4
 Requires:	kdebase-progs >= 3.0.0
