@@ -58,13 +58,11 @@ desktop-file-install --vendor='' \
 rm -rf %{buildroot}
 
 %post
-/sbin/ldconfig
 %update_menus
 %{update_desktop_database}
 %update_icon_cache hicolor
 
 %postun
-/sbin/ldconfig
 %clean_menus
 %{clean_desktop_database}
 %clean_icon_cache hicolor
@@ -77,6 +75,6 @@ rm -rf %{buildroot}
 %_datadir/apps/%{name}
 %_datadir/config.kcfg
 %_datadir/applications/kde/%{name}.desktop
-%{_datadir}/icons/hicolor/*/apps/*
+%{_datadir}/icons/hicolor/*/*/*
 %_datadir/mimelnk/application/vnd.kde.kdenlive.desktop
 %_datadir/mimelnk/application/vnd.kde.kdenlive.scenelist.desktop
