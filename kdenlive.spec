@@ -1,11 +1,13 @@
+%define	snapshot	20071031
+
 Name: 		kdenlive
-Version: 	0.5
-Release: 	%mkrel 2
+Version: 	0.6
+Release: 	0.%{snapshot}.%mkrel 1
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source: 	%name-%version.tar.bz2
+Source: 	%{name}-%{version}-%{snapshot}.tar.bz2
 BuildRequires:	kdelibs-devel
 BuildRequires:	mlt-devel >= 0.2.4
 BuildRequires:	mlt++-devel
@@ -15,6 +17,8 @@ BuildRequires:	ffmpeg-devel
 BuildRequires:	desktop-file-utils
 Requires:	mlt >= 0.2.4
 Requires:	kdebase-progs >= 3.0.0
+Requires:	ffmpeg
+Requires:	dvgrab
 URL:		http://kdenlive.sourceforge.net/
 
 %description
@@ -23,9 +27,13 @@ renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 
 %build
+%if %{mdkversion} <= 200710 || "%{mdvver}" == "mlcd4"
+%define __libtoolize    /bin/true
+%endif
+
 make -f admin/Makefile.common cvs
 
 %ifarch %ix86
@@ -44,7 +52,7 @@ export CXXFLAGS="%optflags -fno-omit-frame-pointer"
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %buildroot
 %makeinstall
 
 desktop-file-install --vendor='' \
@@ -58,12 +66,10 @@ desktop-file-install --vendor='' \
 rm -rf %{buildroot}
 
 %post
-%update_menus
 %{update_desktop_database}
 %update_icon_cache hicolor
 
 %postun
-%clean_menus
 %{clean_desktop_database}
 %clean_icon_cache hicolor
 
@@ -75,6 +81,13 @@ rm -rf %{buildroot}
 %_datadir/apps/%{name}
 %_datadir/config.kcfg
 %_datadir/applications/kde/%{name}.desktop
-%{_datadir}/icons/hicolor/*/*/*
+%_datadir/icons/hicolor/*/*/*
 %_datadir/mimelnk/application/vnd.kde.kdenlive.desktop
 %_datadir/mimelnk/application/vnd.kde.kdenlive.scenelist.desktop
+%_libdir/kde3/kfile_westley.la
+%_libdir/kde3/kfile_westley.so
+%_libdir/kde3/westleythumbcreator.la
+%_libdir/kde3/westleythumbcreator.so
+%_datadir/services/kfile_westley.desktop
+%_datadir/services/westleythumbcreator.desktop
+
