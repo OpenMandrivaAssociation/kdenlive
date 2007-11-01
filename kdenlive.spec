@@ -8,6 +8,7 @@ Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	%{name}-%{version}-%{snapshot}.tar.bz2
+Patch0:		%{name}-desktop-icon-fix.patch
 BuildRequires:	kdelibs-devel
 BuildRequires:	mlt-devel >= 0.2.4
 BuildRequires:	mlt++-devel
@@ -66,10 +67,12 @@ desktop-file-install --vendor='' \
 rm -rf %{buildroot}
 
 %post
+%update_menus
 %{update_desktop_database}
 %update_icon_cache hicolor
 
 %postun
+%clean_menus
 %{clean_desktop_database}
 %clean_icon_cache hicolor
 
