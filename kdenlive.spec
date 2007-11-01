@@ -2,7 +2,7 @@
 
 Name: 		kdenlive
 Version: 	0.6
-Release: 	0.%{snapshot}.%mkrel 1
+Release: 	0.%{snapshot}.%mkrel 2
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
@@ -29,6 +29,7 @@ editing.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1 -b .icon
 
 %build
 %if %{mdkversion} <= 200710 || "%{mdvver}" == "mlcd4"
