@@ -6,6 +6,7 @@ Release: 	%mkrel 0.%{snapshot}.1
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	%{name}-%{version}-%{snapshot}.tar.bz2
 Patch0:		%{name}-desktop-icon-fix.patch
 Patch1:		%{name}-desktop-path-fix.patch
