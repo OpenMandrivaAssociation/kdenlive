@@ -1,4 +1,4 @@
-%define	snapshot	20071212
+%define	snapshot	20080105
 
 Name: 		kdenlive
 Version: 	0.6
@@ -36,7 +36,8 @@ editing.
 %patch1 -p1 -b .path
 
 %build
-cmake . -DCMAKE_INSTALL_PREFIX=%{buildroot}%{_prefix}
+cmake . -DCMAKE_CXX_FLAGS="%{optflags}" \
+	-DCMAKE_INSTALL_PREFIX=%{buildroot}%{_prefix}
 make
 
 %install
