@@ -2,7 +2,7 @@
 
 Name: 		kdenlive
 Version: 	0.6
-Release: 	%mkrel 0.%{snapshot}.1
+Release: 	%mkrel 0.%{snapshot}.2
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
@@ -22,7 +22,7 @@ Requires:	mlt >= 0.2.4
 Requires:	kdebase-progs >= 3.0.0
 Requires:	ffmpeg
 Requires:	dvgrab
-Requires:	swh-plugins
+Suggests:	swh-plugins
 URL:		http://kdenlive.sourceforge.net/
 
 %description
