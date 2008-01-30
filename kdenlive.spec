@@ -1,8 +1,8 @@
-%define	snapshot	20080105
+%define	snapshot	20080130
 
 Name: 		kdenlive
 Version: 	0.6
-Release: 	%mkrel 0.%{snapshot}.2
+Release: 	%mkrel 0.%{snapshot}.1
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
