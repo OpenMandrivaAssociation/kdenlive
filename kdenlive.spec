@@ -2,7 +2,7 @@
 
 Name: 		kdenlive
 Version: 	0.6
-Release: 	%mkrel 0.%{snapshot}.1
+Release: 	%mkrel 0.%{snapshot}.2
 License: 	GPL
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
@@ -12,13 +12,13 @@ Patch0:		%{name}-desktop-icon-fix.patch
 Patch1:		%{name}-desktop-path-fix.patch
 BuildRequires:	cmake
 BuildRequires:	kdelibs-devel
-BuildRequires:	mlt-devel >= 0.2.4
-BuildRequires:	mlt++-devel
+BuildRequires:	mlt-devel >= 0.2.5
+BuildRequires:	mlt++-devel >= 0.2.2-9
 BuildRequires:	libavc-devel
 BuildRequires:	libiec61883-devel
 BuildRequires:	ffmpeg-devel
 BuildRequires:	desktop-file-utils
-Requires:	mlt >= 0.2.4
+Requires:	mlt >= 0.2.5
 Requires:	kdebase-progs >= 3.0.0
 Requires:	ffmpeg
 Requires:	dvgrab
