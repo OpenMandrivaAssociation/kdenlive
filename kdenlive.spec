@@ -12,6 +12,7 @@ Patch0:		%{name}-desktop-icon-fix.patch
 Patch1:		%{name}-desktop-path-fix.patch
 BuildRequires:	cmake
 BuildRequires:	kdelibs-devel
+BuildRequires:	ffmpeg-devel
 BuildRequires:	mlt-devel >= 0.2.5
 BuildRequires:	mlt++-devel >= 0.2.2-9
 BuildRequires:	libavc-devel
