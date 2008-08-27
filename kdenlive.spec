@@ -25,23 +25,6 @@ Kdenlive is a non-linear video editor for KDE. It relies on a separate
 renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
-%prep
-%setup -q -n %{name}-kde4
-%patch0 -p0
-%patch1 -p0
-
-%build
-%cmake_kde4
-%make
-
-%install
-rm -rf %buildroot
-%makeinstall_std -C build
-
-%find_lang %name
-
-%clean
-rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post
@@ -67,3 +50,24 @@ rm -rf %{buildroot}
 %_kde_datadir/applications/kde4/%{name}.desktop
 %_kde_iconsdir/*/*/*/*
 %_kde_datadir/mime/packages/kdenlive.xml
+
+
+#--------------------------------------------------------------------
+
+%prep
+%setup -q -n %{name}-kde4
+%patch0 -p0
+%patch1 -p0
+
+%build
+%cmake_kde4
+%make
+
+%install
+rm -rf %buildroot
+%makeinstall_std -C build
+
+%find_lang %name
+
+%clean
+rm -rf %{buildroot}
