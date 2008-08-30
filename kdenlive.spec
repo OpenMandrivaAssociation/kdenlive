@@ -45,12 +45,13 @@ editing.
 %files -f %name.lang
 %defattr(-, root, root)
 %_kde_bindir/*
+%_kde_libdir/kde4/*.so
 %_kde_datadir/apps/%{name}
+%_kde_services/*.desktop
 %_kde_datadir/config.kcfg/*
 %_kde_datadir/applications/kde4/%{name}.desktop
 %_kde_iconsdir/*/*/*/*
-%_kde_datadir/mime/packages/kdenlive.xml
-
+%_kde_datadir/mime/packages/*.xml
 
 #--------------------------------------------------------------------
 
