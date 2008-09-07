@@ -1,4 +1,4 @@
-%define svnrel 2387
+%define svnrel 2392
 
 Name: 		kdenlive
 Version: 	0.7
