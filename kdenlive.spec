@@ -12,9 +12,9 @@ Patch0:		%{name}-0.7-desktop-icon-fix.patch
 Patch1:		%{name}-0.7-desktop-path-fix.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	ffmpeg-devel
-BuildRequires:	mlt-devel >= 0.3.0
-BuildRequires:	mlt++-devel >= 0.3.0
-Requires:	mlt >= 0.3.0
+BuildRequires:	mlt-devel >= 0.3.1
+BuildRequires:	mlt++-devel >= 0.3.1
+Requires:	mlt >= 0.3.1
 Requires:	ffmpeg
 Requires:	dvgrab
 Suggests:	swh-plugins
