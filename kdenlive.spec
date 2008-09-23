@@ -2,12 +2,15 @@
 
 Name: 		kdenlive
 Version: 	0.7
-Release: 	%mkrel 0.%{svnrel}.1
+Release: 	%mkrel 0.%{svnrel}.2
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	%{name}-kde4-r%{svnrel}.tar.bz2
+Source1:	hi16-app-kdenlive.png
+Source2:	hi32-app-kdenlive.png
+Source3:	hi48-app-kdenlive.png
 Patch0:		%{name}-0.7-desktop-icon-fix.patch
 Patch1:		%{name}-0.7-desktop-path-fix.patch
 BuildRequires:	kdelibs4-devel
@@ -67,6 +70,10 @@ editing.
 %install
 rm -rf %buildroot
 %makeinstall_std -C build
+
+install -D %SOURCE1 %buildroot%_kde_iconsdir/hicolor/16x16/apps/%name.png
+install -D %SOURCE2 %buildroot%_kde_iconsdir/hicolor/32x32/apps/%name.png
+install -D %SOURCE3 %buildroot%_kde_iconsdir/hicolor/48x48/apps/%name.png
 
 %find_lang %name
 
