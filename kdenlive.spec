@@ -1,8 +1,8 @@
-%define svnrel 2404
+%define svnrel 2471
 
 Name: 		kdenlive
 Version: 	0.7
-Release: 	%mkrel 0.%{svnrel}.2
+Release: 	%mkrel 0.%{svnrel}.1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
