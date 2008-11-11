@@ -1,4 +1,4 @@
-%define svnrel 2471
+%define svnrel 2670
 
 Name: 		kdenlive
 Version: 	0.7
@@ -8,11 +8,9 @@ Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	%{name}-kde4-r%{svnrel}.tar.bz2
-Source1:	hi16-app-kdenlive.png
-Source2:	hi32-app-kdenlive.png
-Source3:	hi48-app-kdenlive.png
 Patch0:		%{name}-0.7-desktop-icon-fix.patch
 Patch1:		%{name}-0.7-desktop-path-fix.patch
+Patch2:		kdenlive-kde4-fix-underlink.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	ffmpeg-devel
 BuildRequires:	mlt-devel >= 0.3.1
@@ -62,6 +60,7 @@ editing.
 %setup -q -n %{name}-kde4
 %patch0 -p0
 %patch1 -p0
+%patch2 -p0
 
 %build
 %cmake_kde4
@@ -70,10 +69,6 @@ editing.
 %install
 rm -rf %buildroot
 %makeinstall_std -C build
-
-install -D %SOURCE1 %buildroot%_kde_iconsdir/hicolor/16x16/apps/%name.png
-install -D %SOURCE2 %buildroot%_kde_iconsdir/hicolor/32x32/apps/%name.png
-install -D %SOURCE3 %buildroot%_kde_iconsdir/hicolor/48x48/apps/%name.png
 
 %find_lang %name
 
