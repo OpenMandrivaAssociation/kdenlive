@@ -11,9 +11,9 @@ Patch1:		%{name}-0.7-desktop-path-fix.patch
 Patch2:		kdenlive-kde4-fix-underlink.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	ffmpeg-devel
-BuildRequires:	mlt-devel >= 0.3.1
-BuildRequires:	mlt++-devel >= 0.3.1
-Requires:	mlt >= 0.3.1
+BuildRequires:	mlt-devel >= 0.3.2
+BuildRequires:	mlt++-devel >= 0.3.2
+Requires:	mlt >= 0.3.2
 Requires:	ffmpeg
 Requires:	dvgrab
 Suggests:	swh-plugins
