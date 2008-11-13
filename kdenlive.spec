@@ -1,13 +1,11 @@
-%define svnrel 2670
-
 Name: 		kdenlive
 Version: 	0.7
-Release: 	%mkrel 0.%{svnrel}.1
+Release: 	%mkrel 1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source: 	%{name}-kde4-r%{svnrel}.tar.bz2
+Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.bz2
 Patch0:		%{name}-0.7-desktop-icon-fix.patch
 Patch1:		%{name}-0.7-desktop-path-fix.patch
 Patch2:		kdenlive-kde4-fix-underlink.patch
@@ -57,7 +55,7 @@ editing.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q -n %{name}-kde4
+%setup -q -n %{name}-%{version}
 %patch0 -p0
 %patch1 -p0
 %patch2 -p0
