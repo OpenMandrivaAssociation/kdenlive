@@ -8,9 +8,7 @@ BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
 Patch0:		%{name}-0.7.1-desktop-icon-fix.patch
 Patch1:		%{name}-0.7.1-desktop-path-fix.patch
-Patch2:		kdenlive-kde4-fix-underlink.patch
 BuildRequires:	kdelibs4-devel
-BuildRequires:	ffmpeg-devel
 BuildRequires:	mlt-devel >= 0.3.4
 BuildRequires:	mlt++-devel >= 0.3.4
 Requires:	mlt >= 0.3.4
@@ -51,6 +49,8 @@ editing.
 %_kde_datadir/applications/kde4/%{name}.desktop
 %_kde_iconsdir/*/*/*/*
 %_kde_datadir/mime/packages/*.xml
+%_kde_configdir/kdenlive.knsrc
+%_mandir/man1/*
 
 #--------------------------------------------------------------------
 
@@ -58,7 +58,6 @@ editing.
 %setup -q -n %{name}-%{version}
 %patch0 -p0
 %patch1 -p0
-%patch2 -p0
 
 %build
 %cmake_kde4
