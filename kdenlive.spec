@@ -1,13 +1,12 @@
 Name: 		kdenlive
-Version: 	0.7.2.1
+Version: 	0.7.3
 Release: 	%mkrel 1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
-Patch0:		%{name}-0.7.2-desktop-icon-fix.patch
-Patch1:		%{name}-0.7.1-desktop-path-fix.patch
+Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.bz2
+Patch1:		%{name}-0.7.3-desktop-path-fix.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	mlt-devel >= 0.3.4
 BuildRequires:	mlt++-devel >= 0.3.4
@@ -49,14 +48,13 @@ editing.
 %_kde_datadir/applications/kde4/%{name}.desktop
 %_kde_iconsdir/*/*/*/*
 %_kde_datadir/mime/packages/*.xml
-%_kde_configdir/kdenlive.knsrc
+%_kde_configdir/*.knsrc
 %_mandir/man1/*
 
 #--------------------------------------------------------------------
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch0 -p0
 %patch1 -p0
 
 %build
