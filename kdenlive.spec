@@ -7,8 +7,8 @@ Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.bz2
 BuildRequires:	kdelibs4-devel
-BuildRequires:	mlt-devel >= 0.3.4
-Requires:	mlt >= 0.3.4
+BuildRequires:	mlt-devel >= 0.4.0
+Requires:	mlt >= 0.4.0
 Requires:	ffmpeg
 Requires:	dvgrab
 Suggests:	swh-plugins
