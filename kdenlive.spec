@@ -1,15 +1,13 @@
 Name: 		kdenlive
-Version: 	0.7.3
+Version: 	0.7.4
 Release: 	%mkrel 1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.bz2
-Patch1:		%{name}-0.7.3-desktop-path-fix.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	mlt-devel >= 0.3.4
-BuildRequires:	mlt++-devel >= 0.3.4
 Requires:	mlt >= 0.3.4
 Requires:	ffmpeg
 Requires:	dvgrab
@@ -20,7 +18,6 @@ URL:		http://kdenlive.sourceforge.net/
 Kdenlive is a non-linear video editor for KDE. It relies on a separate
 renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
-
 
 %if %mdkversion < 200900
 %post
@@ -49,13 +46,13 @@ editing.
 %_kde_iconsdir/*/*/*/*
 %_kde_datadir/mime/packages/*.xml
 %_kde_configdir/*.knsrc
+%_kde_configdir/kdenlivetranscodingrc
 %_mandir/man1/*
 
 #--------------------------------------------------------------------
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch1 -p0
 
 %build
 %cmake_kde4
