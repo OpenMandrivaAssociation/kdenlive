@@ -1,5 +1,5 @@
 Name: 		kdenlive
-Version: 	0.7.4
+Version: 	0.7.5
 Release: 	%mkrel 1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
@@ -48,6 +48,10 @@ editing.
 %_kde_configdir/*.knsrc
 %_kde_configdir/kdenlivetranscodingrc
 %_mandir/man1/*
+# Debian menu file
+%exclude %{_datadir}/menu/kdenlive
+%exclude %{_datadir}/pixmaps/kdenlive.xpm
+
 
 #--------------------------------------------------------------------
 
