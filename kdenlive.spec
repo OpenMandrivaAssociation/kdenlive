@@ -12,7 +12,7 @@ Requires:	mlt >= 0.5.0
 Requires:	ffmpeg
 Requires:	dvgrab
 Suggests:	swh-plugins
-URL:		http://kdenlive.sourceforge.net/
+URL:		http://www.kdenlive.org/
 
 %description
 Kdenlive is a non-linear video editor for KDE. It relies on a separate
