@@ -8,6 +8,7 @@ BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
+BuildRequires:	qimageblitz-devel
 BuildRequires:	mlt-devel >= 0.7
 Requires:	mlt >= 0.7
 Requires:	ffmpeg
