@@ -7,6 +7,7 @@ Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
 BuildRequires:	kdelibs4-devel
+BuildRequires:	qjson-devel
 BuildRequires:	mlt-devel >= 0.7
 Requires:	mlt >= 0.7
 Requires:	ffmpeg
@@ -47,10 +48,6 @@ editing.
 %_kde_datadir/mime/packages/*.xml
 %_kde_configdir/*
 %_mandir/man1/*
-# Debian menu file
-%exclude %{_datadir}/menu/kdenlive
-%exclude %{_datadir}/pixmaps/kdenlive.xpm
-
 
 #--------------------------------------------------------------------
 
@@ -64,6 +61,8 @@ editing.
 %install
 rm -rf %buildroot
 %makeinstall_std -C build
+
+rm -f %{buildroot}%{_datadir}/menu/kdenlive %{buildroot}%{_datadir}/pixmaps/kdenlive.xpm
 
 %find_lang %name
 
