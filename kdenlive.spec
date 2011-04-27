@@ -1,5 +1,5 @@
 Name: 		kdenlive
-Version: 	0.7.8
+Version: 	0.8
 Release: 	%mkrel 1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
@@ -7,8 +7,8 @@ Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
 BuildRequires:	kdelibs4-devel
-BuildRequires:	mlt-devel >= 0.5.10
-Requires:	mlt >= 0.5.10
+BuildRequires:	mlt-devel >= 0.7
+Requires:	mlt >= 0.7
 Requires:	ffmpeg
 Requires:	dvgrab
 Suggests:	swh-plugins
