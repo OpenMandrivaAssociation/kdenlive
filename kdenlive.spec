@@ -7,6 +7,7 @@ Group:		Graphical desktop/KDE
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.kdenlive.org/
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
+Patch0:		kdenlive-0.8-fix-glu.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qimageblitz-devel
@@ -42,7 +43,8 @@ editing.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
+%patch0 -p1 -b .gl
 
 %build
 %cmake_kde4
