@@ -1,10 +1,9 @@
 Name: 		kdenlive
-Version: 	0.8.2
-Release: 	%mkrel 1
+Version: 	0.8.2.1
+Release: 	1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://www.kdenlive.org/
 Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
 Patch0:		kdenlive-0.8-fix-glu.patch
@@ -28,7 +27,6 @@ renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
 %files -f %{name}.lang
-%defattr(-, root, root)
 %{_kde_bindir}/*
 %{_kde_libdir}/kde4/*.so
 %{_kde_datadir}/apps/%{name}
@@ -51,13 +49,10 @@ editing.
 %make
 
 %install
-%__rm -rf %buildroot
 %makeinstall_std -C build
 
-%__rm -f %{buildroot}%{_datadir}/menu/kdenlive %{buildroot}%{_datadir}/pixmaps/kdenlive.xpm
+%__rm -f %{buildroot}%{_datadir}/menu/kdenlive 
+%__rm -f %{buildroot}%{_datadir}/pixmaps/kdenlive.xpm
 
 %find_lang %name --with-html
-
-%clean
-%__rm -rf %{buildroot}
 
