@@ -1,12 +1,11 @@
 Name: 		kdenlive
-Version: 	0.8.2.1
+Version: 	0.9.2
 Release: 	1
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
 URL:		http://www.kdenlive.org/
-Source: 	http://downloads.sourceforge.net/kdenlive/%name-%version.tar.gz
-Patch0:		kdenlive-0.8-fix-glu.patch
+Source0: 	http://download.kde.org/stable/kdenlive/%{version}/src/kdenlive-%{version}.tar.bz2
 BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qimageblitz-devel
@@ -42,7 +41,6 @@ editing.
 
 %prep
 %setup -q
-%patch0 -p1 -b .gl
 
 %build
 %cmake_kde4
