@@ -1,6 +1,6 @@
 Name: 		kdenlive
 Version: 	0.9.2
-Release: 	1
+Release: 	2
 License: 	GPLv2+
 Summary: 	A non-linear video editing application for KDE
 Group:		Graphical desktop/KDE
@@ -9,8 +9,8 @@ Source0: 	http://download.kde.org/stable/kdenlive/%{version}/src/kdenlive-%{vers
 BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qimageblitz-devel
-BuildRequires:	mlt-devel >= 0.7.6
-Requires:	mlt >= 0.7.6
+BuildRequires:	mlt-devel >= 0.8.0
+Requires:	mlt >= 0.8.0
 Requires:	ffmpeg
 Requires:	dvgrab
 Suggests:	swh-plugins
