@@ -6,22 +6,16 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
 Source0:	http://download.kde.org/stable/kdenlive/%{version}/src/kdenlive-%{version}.tar.bz2
-BuildRequires:	kdelibs4-devel
+BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libv4l2)
-BuildRequires:	pkgconfig(mlt-framework) >= 0.8.8
-BuildRequires:	pkgconfig(qimageblitz)
-BuildRequires:	pkgconfig(QJson)
-Requires:	mlt >= 0.8.8
+BuildRequires:	pkgconfig(mlt-framework) >= 0.9.6
+BuildRequires:	pkgconfig(shared-mime-info)
+Requires:	mlt >= 0.9.6
 Requires:	ffmpeg
 Requires:	dvgrab
-Suggests:	xine-ui
-Suggests:	swh-plugins
-Suggests:	cdrkit-genisoimage
-Suggests:	dvdauthor
-Suggests:	oxygen-icon-theme
-Suggests:	frei0r
+
 
 %description
 Kdenlive is a non-linear video editor for KDE. It relies on a separate
@@ -44,16 +38,16 @@ editing.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
-rm -f %{buildroot}%{_datadir}/menu/kdenlive
-rm -f %{buildroot}%{_datadir}/pixmaps/kdenlive.xpm
+# We don't use Debian menus
+rm -f %{buildroot}%{_kde5_datadir}/menu/kdenlive
 
 %find_lang %{name} --with-html
 
