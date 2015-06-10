@@ -40,16 +40,21 @@ renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
 %files -f %{name}.lang
-%{_kde_bindir}/*
-%{_kde_libdir}/kde4/*.so
-%{_kde_datadir}/apps/%{name}
-%{_kde_services}/*.desktop
-%{_kde_datadir}/config.kcfg/*
-%{_kde_datadir}/applications/kde4/%{name}.desktop
-%{_kde_iconsdir}/*/*/*/*
-%{_kde_datadir}/mime/packages/*.xml
-%{_kde_configdir}/*
-%{_mandir}/man1/*
+%doc %{_docdir}/HTML/*/kdenlive
+%{_sysconfdir}/xdg/kdenlive_*.knsrc
+%{_bindir}/%{name}*
+%{_libdir}/qt5/plugins/mltpreview.so
+%{_datadir}/appdata/kdenlive.appdata.xml
+%{_datadir}/applications/org.kde.kdenlive.desktop
+%{_datadir}/config.kcfg/kdenlivesettings.kcfg
+%{_iconsdir}/hicolor/*/*/*.*[gz]
+%{_datadir}/kdenlive
+%{_datadir}/knotifications5/kdenlive.notifyrc
+%{_datadir}/kservices5/mltpreview.desktop
+%{_datadir}/kxmlgui5/kdenlive/kdenliveui.rc
+%{_datadir}/mime/packages/*.xml
+%{_datadir}/pixmaps/kdenlive.xpm
+%{_mandir}/man1/%{name}*.1.*
 
 #--------------------------------------------------------------------
 
