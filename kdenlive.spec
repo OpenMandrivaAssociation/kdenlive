@@ -40,7 +40,6 @@ renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
 %files -f %{name}.lang
-%doc %{_docdir}/HTML/*/kdenlive
 %{_sysconfdir}/xdg/kdenlive_*.knsrc
 %{_bindir}/%{name}*
 %{_libdir}/qt5/plugins/mltpreview.so
