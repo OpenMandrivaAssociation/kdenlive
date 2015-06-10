@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
-Source0:	http://download.kde.org/stable/kdenlive/%{version}/src/kdenlive-%{version}.tar.bz2
+Source0:	http://download.kde.org/stable/applications/%{version}/src/kdenlive-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
