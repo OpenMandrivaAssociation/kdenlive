@@ -56,7 +56,7 @@ editing.
 %{_datadir}/kservices5/mltpreview.desktop
 %{_datadir}/kxmlgui5/kdenlive/kdenliveui.rc
 %{_datadir}/mime/packages/*.xml
-%{_datadir}/pixmaps/kdenlive.xpm
+%{_datadir}/pixmaps/kdenlive.png
 %{_mandir}/man1/%{name}*.1.*
 
 #--------------------------------------------------------------------
