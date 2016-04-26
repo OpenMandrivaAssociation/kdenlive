@@ -1,7 +1,7 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	15.12.3
-Release:	2
+Version:	16.04.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -57,6 +57,7 @@ editing.
 %{_datadir}/kxmlgui5/kdenlive/kdenliveui.rc
 %{_datadir}/mime/packages/*.xml
 %{_datadir}/pixmaps/kdenlive.png
+%{_datadir}/pixmaps/kdenlive.svg
 %{_mandir}/man1/%{name}*.1.*
 
 #--------------------------------------------------------------------
@@ -75,5 +76,3 @@ editing.
 rm -f %{buildroot}%{_kde5_datadir}/menu/kdenlive
 
 %find_lang %{name} --with-html
-
-
