@@ -70,7 +70,6 @@ editing.
 %{_datadir}/kservices5/mltpreview.desktop
 %{_datadir}/kxmlgui5/kdenlive/kdenliveui.rc
 %{_datadir}/mime/packages/*.xml
-%{_datadir}/pixmaps/kdenlive.png
 %{_datadir}/pixmaps/kdenlive.svg
 %{_mandir}/man1/%{name}*.1.*
 
