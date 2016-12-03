@@ -61,7 +61,7 @@ editing.
 %{_sysconfdir}/xdg/kdenlive_*.knsrc
 %{_bindir}/%{name}*
 %{_libdir}/qt5/plugins/mltpreview.so
-%{_datadir}/appdata/kdenlive.appdata.xml
+%{_datadir}/metainfo/org.kde.kdenlive.appdata.xml
 %{_datadir}/applications/org.kde.kdenlive.desktop
 %{_datadir}/config.kcfg/kdenlivesettings.kcfg
 %{_iconsdir}/hicolor/*/*/*.*[gz]
@@ -70,7 +70,6 @@ editing.
 %{_datadir}/kservices5/mltpreview.desktop
 %{_datadir}/kxmlgui5/kdenlive/kdenliveui.rc
 %{_datadir}/mime/packages/*.xml
-%{_datadir}/pixmaps/kdenlive.svg
 %{_mandir}/man1/%{name}*.1.*
 
 #--------------------------------------------------------------------
