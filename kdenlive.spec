@@ -78,6 +78,8 @@ editing.
 
 %prep
 %setup -q
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
 %cmake_kde5
 
 %build
