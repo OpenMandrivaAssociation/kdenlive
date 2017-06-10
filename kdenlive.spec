@@ -52,6 +52,7 @@ Requires:	mlt >= 0.9.6
 Requires:	ffmpeg
 Requires:	dvgrab
 Requires:	dvdauthor
+Requires:	frei0r-plugins
 
 %description
 Kdenlive is a non-linear video editor for KDE. It relies on a separate
