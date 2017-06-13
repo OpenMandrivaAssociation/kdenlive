@@ -48,7 +48,8 @@ BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libv4l2)
 BuildRequires:	pkgconfig(mlt-framework) >= 0.9.6
 BuildRequires:	pkgconfig(shared-mime-info)
-Requires:	mlt >= 0.9.6
+Requires:	ladspa
+Requires:	mlt >= 6.2.0
 Requires:	ffmpeg
 Requires:	dvgrab
 Requires:	dvdauthor
