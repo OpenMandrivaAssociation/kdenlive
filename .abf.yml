@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kdenlive-17.12.1.tar.xz: 60a53898ed4161cc4417a1d707a4902a17908eef
+sources:
+  kdenlive-17.12.2.tar.xz: 75c3d20c5b3c2bffcffc03782f81dd314aa8141e
