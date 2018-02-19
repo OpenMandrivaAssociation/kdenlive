@@ -1,0 +1,13 @@
+--- kdenlive-17.12.1/CMakeLists.txt.omv~	2018-01-09 18:52:43.590912612 +0100
++++ kdenlive-17.12.1/CMakeLists.txt	2018-01-09 18:53:01.010973599 +0100
+@@ -119,10 +119,6 @@ add_subdirectory(renderer)
+ add_subdirectory(src)
+ add_subdirectory(thumbnailer)
+ #add_subdirectory(testingArea)
+-ki18n_install(po)
+-if (KF5DocTools_FOUND)
+- kdoctools_install(po)
+-endif()
+ 
+ install( FILES kdenlive.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+ 

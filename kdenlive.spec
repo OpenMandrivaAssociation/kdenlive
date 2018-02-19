@@ -1,12 +1,13 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	17.04.0
-Release:	4
+Version:	 17.12.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/kdenlive-%{version}.tar.xz
+Patch0:		kdenlive-17.12.1-buildfix.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Bookmarks)
@@ -80,8 +81,7 @@ editing.
 
 %prep
 %setup -q
-export CC=gcc
-export CXX=g++
+%apply_patches
 %cmake_kde5
 
 %build
