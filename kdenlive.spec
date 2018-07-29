@@ -1,7 +1,7 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	 18.04.2
-Release:	2
+Version:	18.07.80
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -47,10 +47,10 @@ BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libv4l2)
-BuildRequires:	pkgconfig(mlt-framework) >= 0.9.6
+BuildRequires:	pkgconfig(mlt-framework) >= 6.10.0
 BuildRequires:	pkgconfig(shared-mime-info)
 Requires:	ladspa
-Requires:	mlt >= 6.2.0
+Requires:	mlt >= 6.10.0
 Requires:	ffmpeg
 Requires:	dvgrab
 Requires:	dvdauthor
