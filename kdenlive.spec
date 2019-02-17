@@ -84,7 +84,8 @@ editing.
 %prep
 %setup -q
 %apply_patches
-#(crazy) lets try an gcc build.non-lto build
+# (crazy) breaks with clang , see:
+# https://issues.openmandriva.org/show_bug.cgi?id=2435
 export CC=gcc
 export CXX=g++
 %cmake_kde5
