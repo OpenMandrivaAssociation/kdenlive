@@ -1,7 +1,9 @@
+%define _disable_lto 1
+
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
 Version:	18.12.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -82,6 +84,9 @@ editing.
 %prep
 %setup -q
 %apply_patches
+#(crazy) lets try an gcc build.non-lto build
+export CC=gcc
+export CXX=g++
 %cmake_kde5
 
 %build
