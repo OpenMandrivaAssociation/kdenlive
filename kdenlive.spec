@@ -29,6 +29,8 @@ BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5FileMetaData)
 BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5Purpose)
+BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Concurrent)
 BuildRequires:	cmake(Qt5DBus)
@@ -38,8 +40,8 @@ BuildRequires:	cmake(Qt5DBus)
 BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Script)
-BuildRequires:  cmake(Qt5Qml)
-BuildRequires:  cmake(Qt5Quick)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5WebKit)
 BuildRequires:	cmake(Qt5WebKitWidgets)
 BuildRequires:	cmake(Qt5Network)
@@ -82,8 +84,7 @@ editing.
 #--------------------------------------------------------------------
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 # (crazy) breaks with clang , see:
 # https://issues.openmandriva.org/show_bug.cgi?id=2435
 export CC=gcc
