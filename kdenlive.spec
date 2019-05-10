@@ -3,12 +3,13 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
 Version:	19.04.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/kdenlive-%{version}.tar.xz
+Patch0:		kdenlive-19.04.1-menuentry.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Bookmarks)
@@ -87,10 +88,6 @@ editing.
 
 %prep
 %autosetup -p1
-# (crazy) breaks with clang , see:
-# https://issues.openmandriva.org/show_bug.cgi?id=2435
-export CC=gcc
-export CXX=g++
 %cmake_kde5
 
 %build
