@@ -2,7 +2,7 @@
 
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	19.04.2
+Version:	19.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE

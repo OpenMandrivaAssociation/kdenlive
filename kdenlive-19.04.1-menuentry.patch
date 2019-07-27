@@ -1,7 +1,7 @@
-diff -up kdenlive-19.04.1/data/org.kde.kdenlive.desktop.omv~ kdenlive-19.04.1/data/org.kde.kdenlive.desktop
---- kdenlive-19.04.1/data/org.kde.kdenlive.desktop.omv~	2019-05-10 16:06:12.017962082 +0200
-+++ kdenlive-19.04.1/data/org.kde.kdenlive.desktop	2019-05-10 16:13:52.189159876 +0200
-@@ -1,48 +1,48 @@
+diff -up kdenlive-19.07.80/data/org.kde.kdenlive.desktop.1~ kdenlive-19.07.80/data/org.kde.kdenlive.desktop
+--- kdenlive-19.07.80/data/org.kde.kdenlive.desktop.1~	2019-07-27 20:49:40.295857803 +0200
++++ kdenlive-19.07.80/data/org.kde.kdenlive.desktop	2019-07-27 21:06:32.266164711 +0200
+@@ -1,49 +1,49 @@
  # KDE Config File
  [Desktop Entry]
 -Name=Kdenlive
@@ -22,37 +22,14 @@ diff -up kdenlive-19.04.1/data/org.kde.kdenlive.desktop.omv~ kdenlive-19.04.1/da
 -Name[ga]=Kdenlive
 -Name[gl]=Kdenlive
 -Name[hu]=Kdenlive
+-Name[id]=Kdenlive
 -Name[it]=Kdenlive
 -Name[ja]=Kdenlive
 -Name[km]=Kdenlive
 -Name[ko]=Kdenlive
 -Name[lt]=Kdenlive
 -Name[lv]=Kdenlive
-+Name=Kdenlive Video Editor
-+Name[ar]=محرّر فيديوهاتكدينلايڤ
-+Name[bs]=Kdenlive Video uređivač
-+Name[ca]=Editor de vídeo Kdenlive
-+Name[ca@valencia]=Editor de vídeo Kdenlive
-+Name[cs]=Editor videa Kdenlive
-+Name[da]=Kdenlive Videoredigering
-+Name[de]=Kdenlive Video-Editor
-+Name[el]=Kdenlive Επεξεργαστής βίντεο
-+Name[en_GB]=Kdenlive Video Editor
-+Name[es]=Editor de video Kdenlive
-+Name[et]=Kdenlive Videoredaktor
-+Name[eu]=Kdenlive Bideo editorea
-+Name[fi]=Kdenlive Videomuokkain
-+Name[fr]=Éditeur vidéo Kdenlive
-+Name[ga]=Kdenlive Eagarthóir Físe
-+Name[gl]=Editor de vídeo Kdenlive
-+Name[hu]=Kdenlive Videoszerkesztő
-+Name[it]=Editor video Kdenlive
-+Name[ja]=Kdenlive ビデオエディタ
-+Name[km]=កម្មវិធី​កែសម្រួល​វីដេអូKdenlive 
-+Name[ko]=Kdenlive 동영상 편집기
-+Name[lt]=Kdenlive Video redaktorius
-+Name[lv]=Kdenlive Video redaktors
- Name[mr]=के-डि-एनलाइव्ह
+-Name[mr]=के-डि-एनलाइव्ह
 -Name[nb]=Kdenlive
 -Name[nds]=Kdenlive
 -Name[nl]=Kdenlive
@@ -66,18 +43,44 @@ diff -up kdenlive-19.04.1/data/org.kde.kdenlive.desktop.omv~ kdenlive-19.04.1/da
 -Name[sl]=Kdenlive
 -Name[sv]=Kdenlive
 -Name[tr]=Kdenlive
++Name=Kdenlive Video Editor
++Name[ar]=محرّر فيديوهاتكدينلايڤ
++Name[bs]=Kdenlive Video uređivač
++Name[ca]=Editor de vídeo Kdenlive
++Name[ca@valencia]=Editor de vídeo Kdenlive
++Name[cs]=Editor videa Kdenlive
++Name[da]=Kdenlive Videoredigering
++Name[de]=Kdenlive Video-Editor
++Name[el]=Kdenlive Επεξεργαστής βίντεο
++Name[en_GB]=Kdenlive video editor
++Name[es]=Editor de video Kdenlive
++Name[et]=Kdenlive Videoredaktor
++Name[eu]=Kdenlive Bideo editorea
++Name[fi]=Kdenlive Videomuokkain
++Name[fr]=Éditeur vidéo Kdenlive
++Name[ga]=Kdenlive Eagarthóir Físe
++Name[gl]=Kdenlive Editor de vídeo
++Name[hu]=Kdenlive Videoszerkesztő
++Name[id]=Kdenlive Pengedit Video
++Name[it]=Editor video Kdenlive
++Name[ja]=Kdenlive ビデオエディタ
++Name[km]=Kdenlive កម្មវិធី​កែសម្រួល​វីដេអូ
++Name[ko]=Kdenlive 동영상 편집기
++Name[lt]=Kdenlive Video redaktorius
++Name[lv]=Kdenlive Video redaktors
++Name[mr]=के-डि-एनलाइव्ह व्हिडीओ संपादक
 +Name[nb]=Kdenlive Videoredigeringsprogram
-+Name[nds]=Kdenlive Video-Editor
++Name[nds]=Kdenlive Videobearbeitungsprogramm
 +Name[nl]=Kdenlive Video-bewerker
 +Name[nn]=Kdenlive Videoredigering
 +Name[pl]=Edytor wideo Kdenlive
 +Name[pt]=Editor de Vídeo Kdenlive
 +Name[pt_BR]=Editor de Vídeo Kdenlive
 +Name[ro]=Redactor de imagini Kdenlive
-+Name[ru]=видео редактор Kdenlive
++Name[ru]=Видео редактор Kdenlive
 +Name[sk]=Editor videa Kdenlive
 +Name[sl]=Urejevalnik videa Kdenlive
-+Name[sv]=Videoeditor Kdenlive
++Name[sv]=Kdenlive Videoeditor
 +Name[tr]=Video Düzenleyici Kdenlive
  Name[ug]=Kdenlive
 -Name[uk]=Kdenlive
@@ -85,8 +88,8 @@ diff -up kdenlive-19.04.1/data/org.kde.kdenlive.desktop.omv~ kdenlive-19.04.1/da
  Name[x-test]=xxKdenlivexx
 -Name[zh_CN]=Kdenlive
 -Name[zh_TW]=Kdenlive
-+Name[zh_CN]=视频编辑器 Kdenlive
-+Name[zh_TW]=影像編輯器 Kdenlive
++Name[zh_CN]=Kdenlive 视频编辑器
++Name[zh_TW]=Kdenlive 影像編輯器
  GenericName=Video Editor
  GenericName[ar]=محرّر فيديوهات
  GenericName[bs]=Video uređivač
