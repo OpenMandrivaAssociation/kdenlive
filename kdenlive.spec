@@ -2,7 +2,7 @@
 
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	19.07.80
+Version:	19.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -69,7 +69,7 @@ editing.
 
 %files -f %{name}.lang
 %{_sysconfdir}/xdg/kdenlive_*.knsrc
-%{_sysconfdir}/xdg/kdenlive.categories
+%{_datadir}/qlogging-categories5/kdenlive.categories
 %{_bindir}/%{name}*
 %{_libdir}/qt5/plugins/mltpreview.so
 %{_datadir}/metainfo/org.kde.kdenlive.appdata.xml
