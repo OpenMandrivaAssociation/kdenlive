@@ -1,0 +1,16 @@
+diff -up kdenlive-19.08.2/src/definitions.h.omv~ kdenlive-19.08.2/src/definitions.h
+--- kdenlive-19.08.2/src/definitions.h.omv~	2019-10-14 21:58:37.808023292 +0200
++++ kdenlive-19.08.2/src/definitions.h	2019-10-14 21:59:01.044101398 +0200
+@@ -252,10 +252,12 @@ QDebug operator<<(QDebug qd, const ItemI
+ 
+ // we provide hash function for qstring and QPersistentModelIndex
+ namespace std {
++#if 0 // Qt 5.14 has this
+ template <> struct hash<QString>
+ {
+     std::size_t operator()(const QString &k) const { return qHash(k); }
+ };
++#endif
+ template <> struct hash<QPersistentModelIndex>
+ {
+     std::size_t operator()(const QPersistentModelIndex &k) const { return qHash(k); }
