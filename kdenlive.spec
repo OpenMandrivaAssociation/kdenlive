@@ -2,8 +2,8 @@
 
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	19.12.1
-Release:	2
+Version:	19.12.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -55,6 +55,7 @@ BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libv4l2)
 BuildRequires:	pkgconfig(mlt-framework) >= 6.10.0
 BuildRequires:	pkgconfig(shared-mime-info)
+BuildRequires:	rttr-devel
 Requires:	ladspa
 Requires:	mlt >= 6.10.0
 Requires:	ffmpeg
