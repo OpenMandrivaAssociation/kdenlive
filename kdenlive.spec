@@ -2,7 +2,7 @@
 
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	20.03.80
+Version:	20.03.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -10,7 +10,6 @@ Url:		http://www.kdenlive.org/
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kdenlive-%{version}.tar.xz
 Patch0:		kdenlive-19.04.1-menuentry.patch
-Patch1:		kdenlive-20.03.80-qt-5.15.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Bookmarks)
