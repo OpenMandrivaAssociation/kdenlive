@@ -2,8 +2,8 @@
 
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	20.08.1
-Release:	2
+Version:	20.08.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -70,7 +70,7 @@ renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
 %files -f %{name}.lang
-%{_sysconfdir}/xdg/kdenlive_*.knsrc
+%{_datadir}/knsrcfiles/*
 %{_datadir}/qlogging-categories5/kdenlive.categories
 %{_bindir}/%{name}*
 %{_libdir}/qt5/plugins/mltpreview.so
