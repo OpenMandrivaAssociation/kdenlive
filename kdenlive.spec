@@ -3,7 +3,7 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
 Version:	20.12.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -51,6 +51,7 @@ BuildRequires:	cmake(Qt5Qml)
 BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5QuickWidgets)
 BuildRequires:	cmake(Qt5Multimedia)
+BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libv4l2)
