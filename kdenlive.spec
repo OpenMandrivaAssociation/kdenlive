@@ -1,5 +1,3 @@
-%define _disable_lto 1
-
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
 Version:	20.12.3
