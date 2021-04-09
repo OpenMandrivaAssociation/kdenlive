@@ -1,6 +1,6 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	21.03.80
+Version:	21.03.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
