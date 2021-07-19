@@ -1,6 +1,6 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -54,11 +54,12 @@ BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libv4l2)
-BuildRequires:	pkgconfig(mlt-framework) >= 6.10.0
+BuildRequires:	pkgconfig(mlt-framework-7)
+BuildRequires:	pkgconfig(mlt++-7)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	rttr-devel
 Requires:	ladspa
-Requires:	mlt >= 6.10.0
+Requires:	mlt >= 7.0.0
 Requires:	ffmpeg
 Requires:	dvgrab
 Requires:	dvdauthor
@@ -85,6 +86,12 @@ editing.
 %{_datadir}/mime/packages/*.xml
 %{_mandir}/man1/%{name}*.1.*
 %doc %{_docdir}/Kdenlive
+
+# Is it worth creating a -devel package for this?
+# (Or just not packaging it at all?)
+%{_prefix}/lib/cmake/kdenlive/KdenliveQCHTargets.cmake
+%{_datadir}/docs/qch/kdenlive.qch
+%{_datadir}/docs/tags/kdenlive.tags
 
 #--------------------------------------------------------------------
 
