@@ -59,6 +59,9 @@ BuildRequires:	pkgconfig(mlt++-7)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	rttr-devel
 BuildRequires:	doxygen >= 1.8.13
+BuildRequires:	graphviz
+# For qhelpgenerator
+BuildRequires:	qt5-assistant
 Requires:	ladspa
 Requires:	mlt >= 7.0.0
 Requires:	ffmpeg
