@@ -1,0 +1,30 @@
+diff -up kdenlive-21.08.1/tests/catch.hpp.omv~ kdenlive-21.08.1/tests/catch.hpp
+--- kdenlive-21.08.1/tests/catch.hpp.omv~	2021-09-01 00:09:04.134776352 +0200
++++ kdenlive-21.08.1/tests/catch.hpp	2021-09-01 00:10:47.483795071 +0200
+@@ -5909,7 +5909,7 @@ namespace Catch {
+         static bool isSet;
+         static struct sigaction oldSigActions[];
+         static stack_t oldSigStack;
+-        static char altStackMem[];
++        static char * altStackMem;
+ 
+         static void handleSignal( int sig );
+ 
+@@ -8522,7 +8522,7 @@ namespace Catch {
+ 
+     // 32kb for the alternate stack seems to be sufficient. However, this value
+     // is experimentally determined, so that's not guaranteed.
+-    constexpr static std::size_t sigStackSize = 32768 >= MINSIGSTKSZ ? 32768 : MINSIGSTKSZ;
++    const static std::size_t sigStackSize = 32768 >= MINSIGSTKSZ ? 32768 : MINSIGSTKSZ;
+ 
+     static SignalDefs signalDefs[] = {
+         { SIGINT,  "SIGINT - Terminal interrupt signal" },
+@@ -8581,7 +8581,7 @@ namespace Catch {
+     bool FatalConditionHandler::isSet = false;
+     struct sigaction FatalConditionHandler::oldSigActions[sizeof(signalDefs)/sizeof(SignalDefs)] = {};
+     stack_t FatalConditionHandler::oldSigStack = {};
+-    char FatalConditionHandler::altStackMem[sigStackSize] = {};
++    char * FatalConditionHandler::altStackMem = new char[sigStackSize];
+ 
+ } // namespace Catch
+ 
