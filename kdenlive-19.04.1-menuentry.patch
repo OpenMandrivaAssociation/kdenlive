@@ -1,11 +1,11 @@
-diff -up kdenlive-21.07.80/data/org.kde.kdenlive.desktop.1~ kdenlive-21.07.80/data/org.kde.kdenlive.desktop
---- kdenlive-21.07.80/data/org.kde.kdenlive.desktop.1~	2021-07-20 00:10:00.139458462 +0200
-+++ kdenlive-21.07.80/data/org.kde.kdenlive.desktop	2021-07-20 00:29:56.831480139 +0200
-@@ -1,50 +1,48 @@
+diff -up kdenlive-22.03.80/data/org.kde.kdenlive.desktop.1~ kdenlive-22.03.80/data/org.kde.kdenlive.desktop
+--- kdenlive-22.03.80/data/org.kde.kdenlive.desktop.1~	2022-04-06 15:14:26.655363834 +0200
++++ kdenlive-22.03.80/data/org.kde.kdenlive.desktop	2022-04-06 15:16:59.150692532 +0200
+@@ -1,50 +1,49 @@
  # KDE Config File
  [Desktop Entry]
 -Name=Kdenlive
--Name[ar]=كدينلايڤ
+-Name[ar]=كدينلايف
 -Name[az]=Kdenlive
 -Name[bs]=Kdenlive
 -Name[ca]=Kdenlive
@@ -44,6 +44,11 @@ diff -up kdenlive-21.07.80/data/org.kde.kdenlive.desktop.1~ kdenlive-21.07.80/da
 -Name[sl]=Kdenlive
 -Name[sv]=Kdenlive
 -Name[tr]=Kdenlive
+-Name[ug]=Kdenlive
+-Name[uk]=Kdenlive
+-Name[x-test]=xxKdenlivexx
+-Name[zh_CN]=Kdenlive
+-Name[zh_TW]=Kdenlive
 +Name=Kdenlive Video Editor
 +Name[ar]=محرّر فيديوهاتكدينلايڤ
 +Name[bs]=Kdenlive Video uređivač
@@ -83,14 +88,11 @@ diff -up kdenlive-21.07.80/data/org.kde.kdenlive.desktop.1~ kdenlive-21.07.80/da
 +Name[sl]=Urejevalnik videa Kdenlive
 +Name[sv]=Kdenlive Videoeditor
 +Name[tr]=Video Düzenleyici Kdenlive
- Name[ug]=Kdenlive
--Name[uk]=Kdenlive
--Name[x-test]=xxKdenlivexx
--Name[zh_CN]=Kdenlive
--Name[zh_TW]=Kdenlive
 +Name[uk]=Відеоредактор Kdenlive
 +Name[zh_CN]=Kdenlive 视频编辑器
 +Name[zh_TW]=Kdenlive 影像編輯器
++Name[az]=Kdenlive Video redaktor
++Name[x-test]=xxKdenlive Video Editorxx
  GenericName=Video Editor
  GenericName[ar]=محرّر فيديوهات
  GenericName[az]=Video redaktor
