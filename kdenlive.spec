@@ -1,6 +1,6 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -74,6 +74,14 @@ Kdenlive is a non-linear video editor for KDE. It relies on a separate
 renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
+%package devel
+Summary:	Development files for Kdenlive
+Group:		Development/KDE and Qt
+Requires:	%{name} = %{EVRD}
+
+%description devel
+Development files for Kdenlive
+
 %files -f %{name}.lang
 %{_datadir}/knsrcfiles/*
 %{_datadir}/qlogging-categories5/kdenlive.categories
@@ -91,9 +99,9 @@ editing.
 %{_mandir}/man1/%{name}*.1.*
 %doc %{_docdir}/Kdenlive
 
-# Is it worth creating a -devel package for this?
-# (Or just not packaging it at all?)
+%files devel
 %{_prefix}/lib/cmake/kdenlive/KdenliveQCHTargets.cmake
+%{_libdir}/qt5/plugins/designer/kdenlivewidgets.so
 %{_docdir}/qt5/kdenlive.{qch,tags}
 
 #--------------------------------------------------------------------
