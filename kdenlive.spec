@@ -113,7 +113,9 @@ Development files for Kdenlive
 %cmake_kde5
 
 %build
-%ninja -C build
+# Limit to 4 CPUs because of memory constraints -- build consistently fails on
+# altra (160 CPUs, 32 GB RAM...)
+%ninja -j8 -C build
 
 %install
 %ninja_install -C build
