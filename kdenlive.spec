@@ -1,6 +1,6 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	22.12.0
+Version:	22.12.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -103,7 +103,6 @@ Development files for Kdenlive
 
 %files devel
 %{_prefix}/lib/cmake/kdenlive/KdenliveQCHTargets.cmake
-%{_libdir}/qt5/plugins/designer/kdenlivewidgets.so
 %{_docdir}/qt5/kdenlive.{qch,tags}
 
 #--------------------------------------------------------------------
