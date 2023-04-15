@@ -1,7 +1,7 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -88,14 +88,13 @@ Development files for Kdenlive
 %{_datadir}/knsrcfiles/*
 %{_datadir}/qlogging-categories5/kdenlive.categories
 %{_bindir}/%{name}*
-%{_libdir}/qt5/plugins/mltpreview.so
+%{_libdir}/qt5/plugins/kf5/thumbcreator/mltpreview.so
 %{_datadir}/metainfo/org.kde.kdenlive.appdata.xml
 %{_datadir}/applications/org.kde.kdenlive.desktop
 %{_datadir}/config.kcfg/kdenlivesettings.kcfg
 %{_iconsdir}/hicolor/*/*/*.*[gz]
 %{_datadir}/kdenlive
 %{_datadir}/knotifications5/kdenlive.notifyrc
-%{_datadir}/kservices5/mltpreview.desktop
 %{_datadir}/kxmlgui5/kdenlive/kdenliveui.rc
 %{_datadir}/mime/packages/*.xml
 %{_mandir}/man1/%{name}*.1.*
