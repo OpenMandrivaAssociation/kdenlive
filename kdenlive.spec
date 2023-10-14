@@ -1,6 +1,6 @@
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	23.08.1
+Version:	23.08.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -95,7 +95,6 @@ Development files for Kdenlive
 %{_iconsdir}/hicolor/*/*/*.*[gz]
 %{_datadir}/kdenlive
 %{_datadir}/knotifications5/kdenlive.notifyrc
-%{_datadir}/kxmlgui5/kdenlive/kdenliveui.rc
 %{_datadir}/mime/packages/*.xml
 %{_mandir}/man1/%{name}*.1.*
 %doc %{_docdir}/Kdenlive
