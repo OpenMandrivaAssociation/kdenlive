@@ -1,12 +1,19 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	A non-linear video editing application for KDE
 Name:		plasma6-kdenlive
-Version:	24.01.90
-Release:	3
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/multimedia/kdenlive/-/archive/%{gitbranch}/kdenlive-%{gitbranchd}.tar.bz2#/kdenlive-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kdenlive-%{version}.tar.xz
+%endif
 Patch0:		kdenlive-19.04.1-menuentry.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Archive)
@@ -98,7 +105,7 @@ editing.
 #--------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kdenlive-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kdenlive-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
