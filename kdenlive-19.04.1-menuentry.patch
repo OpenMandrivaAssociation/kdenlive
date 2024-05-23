@@ -1,11 +1,12 @@
-diff -up kdenlive-23.08.0/data/org.kde.kdenlive.desktop.1~ kdenlive-23.08.0/data/org.kde.kdenlive.desktop
---- kdenlive-23.08.0/data/org.kde.kdenlive.desktop.1~	2023-08-24 02:26:49.789633055 +0200
-+++ kdenlive-23.08.0/data/org.kde.kdenlive.desktop	2023-08-24 02:33:50.464051044 +0200
-@@ -1,52 +1,53 @@
+diff -up kdenlive-24.05.0/data/org.kde.kdenlive.desktop.1~ kdenlive-24.05.0/data/org.kde.kdenlive.desktop
+--- kdenlive-24.05.0/data/org.kde.kdenlive.desktop.1~	2024-05-23 23:10:52.705584582 +0200
++++ kdenlive-24.05.0/data/org.kde.kdenlive.desktop	2024-05-23 23:53:39.526946076 +0200
+@@ -1,55 +1,52 @@
  # KDE Config File
  [Desktop Entry]
 -Name=Kdenlive
--Name[ar]=كِيدِينلايف
+-Name[ar]=كدنلايف
+-Name[ast]=Kdenlive
 -Name[az]=Kdenlive
 -Name[bs]=Kdenlive
 -Name[ca]=Kdenlive
@@ -23,6 +24,7 @@ diff -up kdenlive-23.08.0/data/org.kde.kdenlive.desktop.1~ kdenlive-23.08.0/data
 -Name[fr]=Kdenlive
 -Name[ga]=Kdenlive
 -Name[gl]=Kdenlive
+-Name[he]=Kdenlive
 -Name[hu]=Kdenlive
 -Name[id]=Kdenlive
 -Name[it]=Kdenlive
@@ -45,13 +47,13 @@ diff -up kdenlive-23.08.0/data/org.kde.kdenlive.desktop.1~ kdenlive-23.08.0/data
 -Name[sk]=Kdenlive
 -Name[sl]=Kdenlive
 -Name[sv]=Kdenlive
+-Name[tok]=ilo Kdenlive
 -Name[tr]=Kdenlive
 -Name[ug]=Kdenlive
 -Name[uk]=Kdenlive
 -Name[x-test]=xxKdenlivexx
 -Name[zh_CN]=Kdenlive
 -Name[zh_TW]=Kdenlive
-+
 +Name=Kdenlive Video Editor
 +Name[ar]=محرّر فيديوهاتكدينلايڤ
 +Name[az]=Kdenlive Video redaktor
