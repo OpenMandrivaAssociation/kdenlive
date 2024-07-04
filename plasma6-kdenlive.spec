@@ -3,8 +3,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	A non-linear video editing application for KDE
 Name:		plasma6-kdenlive
-Version:	24.05.1
-Release:	%{?git:0.%{git}.}2
+Version:	24.05.2
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kdenlive.org/
@@ -15,7 +15,6 @@ Source0:	https://invent.kde.org/multimedia/kdenlive/-/archive/%{gitbranch}/kdenl
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kdenlive-%{version}.tar.xz
 %endif
 Patch0:		kdenlive-19.04.1-menuentry.patch
-Patch1:		https://invent.kde.org/multimedia/kdenlive/-/commit/8be0e826471332bb739344ebe1859298c46e9e0f.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Archive)
 BuildRequires:	cmake(KF6Bookmarks)
