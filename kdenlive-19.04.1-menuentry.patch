@@ -1,7 +1,7 @@
-diff -up kdenlive-24.05.0/data/org.kde.kdenlive.desktop.1~ kdenlive-24.05.0/data/org.kde.kdenlive.desktop
---- kdenlive-24.05.0/data/org.kde.kdenlive.desktop.1~	2024-05-23 23:10:52.705584582 +0200
-+++ kdenlive-24.05.0/data/org.kde.kdenlive.desktop	2024-05-23 23:53:39.526946076 +0200
-@@ -1,55 +1,52 @@
+diff -up kdenlive-25.04.0/data/org.kde.kdenlive.desktop.1~ kdenlive-25.04.0/data/org.kde.kdenlive.desktop
+--- kdenlive-25.04.0/data/org.kde.kdenlive.desktop.1~	2025-04-16 05:10:49.000000000 +0200
++++ kdenlive-25.04.0/data/org.kde.kdenlive.desktop	2025-04-17 16:17:31.881973779 +0200
+@@ -1,57 +1,52 @@
  # KDE Config File
  [Desktop Entry]
 -Name=Kdenlive
@@ -25,6 +25,7 @@ diff -up kdenlive-24.05.0/data/org.kde.kdenlive.desktop.1~ kdenlive-24.05.0/data
 -Name[ga]=Kdenlive
 -Name[gl]=Kdenlive
 -Name[he]=Kdenlive
+-Name[hi]=केडेनलाइव
 -Name[hu]=Kdenlive
 -Name[id]=Kdenlive
 -Name[it]=Kdenlive
@@ -44,6 +45,7 @@ diff -up kdenlive-24.05.0/data/org.kde.kdenlive.desktop.1~ kdenlive-24.05.0/data
 -Name[pt_BR]=Kdenlive
 -Name[ro]=Kdenlive
 -Name[ru]=Kdenlive
+-Name[sa]=क्डेन्लिव्
 -Name[sk]=Kdenlive
 -Name[sl]=Kdenlive
 -Name[sv]=Kdenlive
@@ -65,8 +67,8 @@ diff -up kdenlive-24.05.0/data/org.kde.kdenlive.desktop.1~ kdenlive-24.05.0/data
 +Name[de]=Kdenlive Video-Editor
 +Name[el]=Kdenlive Επεξεργαστής βίντεο
 +Name[en_GB]=Kdenlive video editor
-+Name[es]=Editor de video Kdenlive
 +Name[eo]=Kdenlive Video Editor
++Name[es]=Editor de video Kdenlive
 +Name[et]=Kdenlive Videoredaktor
 +Name[eu]=Kdenlive Bideo editorea
 +Name[fi]=Kdenlive Videomuokkain
