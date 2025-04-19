@@ -70,6 +70,10 @@ BuildRequires:	pkgconfig(libv4l2)
 BuildRequires:	pkgconfig(mlt-framework-7)
 BuildRequires:	pkgconfig(mlt++-7)
 BuildRequires:	pkgconfig(shared-mime-info)
+BuildRequires:	pkgconfig(libavcodec)
+BuildRequires:	pkgconfig(libavformat)
+BuildRequires:	pkgconfig(libavutil)
+BuildRequires:	pkgconfig(libswresample)
 BuildRequires:	rttr-devel
 BuildRequires:	doxygen >= 1.8.13
 BuildRequires:	graphviz
