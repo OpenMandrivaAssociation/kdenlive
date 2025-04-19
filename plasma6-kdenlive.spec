@@ -61,6 +61,7 @@ BuildRequires:	cmake(Qt6Multimedia)
 BuildRequires:	cmake(Qt6NetworkAuth)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(OpenTimelineIO)
+BuildRequires:	cmake(Imath)
 BuildRequires:  qt6-qtbase-theme-gtk3
 BuildRequires:  qt6-qtmultimedia-gstreamer
 BuildRequires:  qml(QtNetwork)
