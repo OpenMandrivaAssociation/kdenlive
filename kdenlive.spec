@@ -4,7 +4,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -89,12 +89,18 @@ Requires:	dvdauthor
 Requires:	frei0r-plugins
 Recommends:	mediainfo
 
+%rename plasma6-kdenlive
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+BuildOption:	-DFETCH_OTIO:BOOL=OFF
+
 %description
 Kdenlive is a non-linear video editor for KDE. It relies on a separate
 renderer, piave, to handle it's rendering. Kdenlive supports multitrack
 editing.
 
-%files -f kdenlive.lang
+%files -f %{name}.lang
 %{_datadir}/knsrcfiles/*
 %{_datadir}/qlogging-categories6/kdenlive.categories
 %{_bindir}/kdenlive*
@@ -106,27 +112,14 @@ editing.
 %{_datadir}/kdenlive
 %{_datadir}/knotifications6/kdenlive.notifyrc
 %{_datadir}/mime/packages/*.xml
-%{_mandir}/man1/kdenlive*.1.*
+%{_mandir}/man1/kdenlive*.1*
 %doc %{_docdir}/Kdenlive
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kdenlive-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-DFETCH_OTIO:BOOL=OFF \
-	-G Ninja
 
 %build
 # Limit to 4 CPUs because of memory constraints -- build consistently fails on
 # altra (160 CPUs, 32 GB RAM...)
-%ninja -j8 -C build
+%ninja -j8 -C _OMV_rpm_build
 
-%install
-%ninja_install -C build
-
+%install -a
 # We don't use Debian menus
 rm -f %{buildroot}%{_datadir}/menu/kdenlive
-
-%find_lang kdenlive --with-html
