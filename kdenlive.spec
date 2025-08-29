@@ -4,8 +4,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	25.04.3
-Release:	%{?git:0.%{git}.}3
+Version:	25.08.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kdenlive.org/
@@ -104,7 +104,8 @@ editing.
 %{_datadir}/knsrcfiles/*
 %{_datadir}/qlogging-categories6/kdenlive.categories
 %{_bindir}/kdenlive*
-%{_libdir}/qt6/plugins/kf6/thumbcreator/mltpreview.so
+%{_qtdir}/plugins/kf6/thumbcreator/mltpreview.so
+%{_qtdir}/qml/org/kde/kdenlive
 %{_datadir}/metainfo/org.kde.kdenlive.appdata.xml
 %{_datadir}/applications/org.kde.kdenlive.desktop
 %{_datadir}/config.kcfg/kdenlivesettings.kcfg
@@ -112,6 +113,7 @@ editing.
 %{_datadir}/kdenlive
 %{_datadir}/knotifications6/kdenlive.notifyrc
 %{_datadir}/mime/packages/*.xml
+%{_datadir}/qlogging-categories6/kdenlive.renamecategories
 %{_mandir}/man1/kdenlive*.1*
 %doc %{_docdir}/Kdenlive
 
@@ -123,3 +125,5 @@ editing.
 %install -a
 # We don't use Debian menus
 rm -f %{buildroot}%{_datadir}/menu/kdenlive
+# We also don't need static libs without headers
+rm -f %{buildroot}%{_libdir}/libkdenliveLibplugin.a
