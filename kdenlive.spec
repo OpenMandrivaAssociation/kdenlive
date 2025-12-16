@@ -4,8 +4,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	A non-linear video editing application for KDE
 Name:		kdenlive
-Version:	25.08.3
-Release:	%{?git:0.%{git}.}2
+Version:	25.12.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kdenlive.org/
@@ -62,6 +62,7 @@ BuildRequires:	cmake(Qt6NetworkAuth)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(OpenTimelineIO)
 BuildRequires:	cmake(Imath)
+BuildRequires:	cmake(KDDockWidgets-qt6)
 BuildRequires:  qt6-qtbase-theme-gtk3
 BuildRequires:  qt6-qtmultimedia-gstreamer
 BuildRequires:  qml(QtNetwork)
