@@ -16,6 +16,8 @@ Source0:	https://invent.kde.org/multimedia/kdenlive/-/archive/%{gitbranch}/kdenl
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kdenlive-%{version}.tar.xz
 %endif
 Patch0:		kdenlive-19.04.1-menuentry.patch
+# Qt 6.12 qmllint rejects switch cases that are bare expression statements.
+Patch1:		kdenlive-26.08.1-qt612-thumb-model.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Archive)
 BuildRequires:	cmake(KF6Bookmarks)
