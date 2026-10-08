@@ -18,8 +18,6 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kdenli
 Patch0:		kdenlive-19.04.1-menuentry.patch
 # Qt 6.12 qmllint rejects switch cases that are bare expression statements.
 Patch1:		kdenlive-26.08.1-qt612-thumb-model.patch
-# Qt 6.12 qmllint returns failure for warnings, and the QML has hundreds of them.
-Patch2:		kdenlive-26.08.1-qt612-skip-qmllint.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Archive)
 BuildRequires:	cmake(KF6Bookmarks)
@@ -100,6 +98,8 @@ Recommends:	mediainfo
 BuildSystem:	cmake
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 BuildOption:	-DFETCH_OTIO:BOOL=OFF
+# Qt 6.12 qmllint returns failure for warnings, and the QML has hundreds of them.
+BuildOption:	-DBUILD_RUN_QMLLINT:BOOL=OFF
 
 %description
 Kdenlive is a non-linear video editor for KDE. It relies on a separate
