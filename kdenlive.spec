@@ -98,6 +98,8 @@ Recommends:	mediainfo
 BuildSystem:	cmake
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 BuildOption:	-DFETCH_OTIO:BOOL=OFF
+# One LTO link at a time. Parallel links of bin/kdenlive are OOM-killed.
+BuildOption:	-DCMAKE_JOB_POOL_LINK:STRING=console
 # Qt 6.12 qmllint returns failure for warnings, and the QML has hundreds of them.
 BuildOption:	-DBUILD_RUN_QMLLINT:BOOL=OFF
 
